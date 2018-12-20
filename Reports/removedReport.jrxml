@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="removedReport" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e4bb83a7-a0f1-4b46-a4a7-3d05451711ba">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="from" class="java.lang.String"/>
+	<parameter name="to" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT companytable.companyname,companytable.location,companytable.address,companytable.city,companytable.phoneno
+,companytable.email,companytable.dealerin,removetable.removedate,removetable.productcode,
+CONCAT(stocktable.type,'-',stocktable.description,'-',removetable.imei),removetable.qty,
+removetable.reason,usertable.name FROM companytable,usertable,stocktable,removetable WHERE usertable.companyid = companytable.companyid AND stocktable.productcode = removetable.productcode AND removetable.userid = usertable.id AND removetable.status = '1' AND removedate BETWEEN $P{from} AND $P{to}]]>
+	</queryString>
+	<field name="companyname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="location" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="address" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="city" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="phoneno" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dealerin" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="removedate" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="productcode" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CONCAT(stocktable.type,&apos;-&apos;,stocktable.description,&apos;-&apos;,removetable.imei)" class="java.lang.String"/>
+	<field name="qty" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="reason" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="133" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="72" width="802" height="20" forecolor="#3333FF" uuid="2369939e-edc9-4243-aaed-e4c38916b26e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Phone #: " +$F{phoneno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="42" width="802" height="20" uuid="e6a9ec64-0887-4d33-be77-a1489d812c50"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["PO BOX "+ $F{address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="18" width="802" height="32" uuid="11856f93-731e-4411-8ed8-b54a9444ced3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{companyname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="84" width="802" height="20" uuid="8e86422d-2120-4896-9d41-2d2aa226ccff"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="592" y="0" width="210" height="28" forecolor="#CCCCCC" uuid="caca28bf-96f4-465e-8231-852ed2a1c4be"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Removed Stock]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="57" width="802" height="20" uuid="80ce3529-b268-4462-a9de-9d95b8e9d762"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{city}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="117" width="802" height="16" uuid="01c8f341-5b29-40a6-93f0-e30ac5be4262"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="97" width="802" height="20" uuid="c3f6c7ae-269b-4fe9-99a5-6aba75242989"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Dealer in "+$F{dealerin}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="1" y="0" width="801" height="20" backcolor="#FFFFCC" uuid="c013ec33-366c-4291-aff6-942c69760352"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="76" height="20" uuid="f1a5c4f2-5ac7-4dae-b22e-6dee3e185276"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="76" y="0" width="100" height="20" uuid="86a7da69-2410-4d9e-aee7-927d3f5f6a37"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[P-CODE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="176" y="0" width="269" height="20" uuid="c7588780-2261-43bf-b2e3-7459909b879b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="445" y="0" width="44" height="20" uuid="8d8f8213-7967-48c4-9468-92dbbc1289e3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="489" y="0" width="213" height="20" uuid="d3d59fb7-982c-414a-9e9e-f0a72f17ea74"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reason]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="702" y="0" width="100" height="20" uuid="f0d97c27-fba2-432e-909c-c0e15a55b566"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Removed By]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="76" height="30" uuid="2e15822e-1251-4454-acfa-66a43cdbf974"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{removedate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="82" y="0" width="87" height="30" uuid="ce0ea60c-62cd-4b03-9186-27c2d2bad233"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{productcode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="0" width="259" height="30" uuid="1da5ba95-aa37-4f05-a02e-1d8c60efbf72"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{CONCAT(stocktable.type,'-',stocktable.description,'-',removetable.imei)}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="445" y="0" width="44" height="30" uuid="b5c01dbd-f5ec-4038-9f06-45dedb8c0319"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="495" y="0" width="202" height="30" uuid="d41fec0c-6414-47b9-a58f-3feb4ba59d8d"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{reason}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="708" y="0" width="89" height="30" uuid="a3408451-850a-4a92-8920-d4e2f20d0129"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="1" y="0" width="1" height="30" uuid="df0ebe4c-60a8-417f-84e6-f454c33e1e9e"/>
+			</line>
+			<line>
+				<reportElement x="76" y="0" width="1" height="30" uuid="dfda2fec-bee1-4c37-bcfa-e90b9c02d188"/>
+			</line>
+			<line>
+				<reportElement x="175" y="0" width="1" height="30" uuid="180c1232-0b57-4082-b9fc-3d21ebf7695a"/>
+			</line>
+			<line>
+				<reportElement x="444" y="0" width="1" height="30" uuid="e5fefb06-53f4-4950-b639-3afc18548c24"/>
+			</line>
+			<line>
+				<reportElement x="488" y="0" width="1" height="30" uuid="b3ea45f7-fb80-42c2-8d82-4c9474bb72fe"/>
+			</line>
+			<line>
+				<reportElement x="702" y="0" width="1" height="30" uuid="2951da1d-7f0a-4dda-81a9-d8661243b863"/>
+			</line>
+			<line>
+				<reportElement x="801" y="0" width="1" height="30" uuid="626c2316-7040-4dcb-9426-57bbdd513c2d"/>
+			</line>
+			<line>
+				<reportElement x="2" y="30" width="800" height="1" uuid="39674f3c-29ee-4005-bca7-f33408351fc7"/>
+			</line>
+		</band>
+	</detail>
+</jasperReport>

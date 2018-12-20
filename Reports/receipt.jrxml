@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="receipt" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="efdaa890-af80-401d-9014-f1a03e18162f">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="151"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="invoiceLines" uuid="32775072-01f2-4824-9e59-448f5f3309b4">
+		<parameter name="invoice_no" class="java.lang.String" isForPrompting="false"/>
+		<queryString>
+			<![CDATA[SELECT stocktable.type,CONCAT(stocktable.description,'- [',salestable.imei,']'),stocktable.qty,salestable.unitprice,salestable.vat,salestable.totalprice FROM salestable,stocktable WHERE salestable.productcode = stocktable.productcode AND salestable.status = '1' AND
+salestable.details = $P{invoice_no}]]>
+		</queryString>
+		<field name="type" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="CONCAT(stocktable.description,&apos;- [&apos;,salestable.imei,&apos;]&apos;)" class="java.lang.String"/>
+		<field name="qty" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="unitprice" class="java.lang.Double">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="vat" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="totalprice" class="java.lang.Double">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+	</subDataset>
+	<parameter name="INVOICE_NO" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT companytable.phoneno AS 'company_phone',companytable.email AS 'company_email',companytable.companyname,companytable.pin AS 'companypin',receipt_table.date,usertable.name AS 'user_name',receipt_table.lpo_no,
+receipt_table.total AS 'Total',receipt_table.receipt_no,receipt_table.lpo_no,clientstable.clientname,clientstable.clientphone,
+clientstable.clientemail,receipt_table.total_vat  FROM companytable,usertable,receipt_table,clientstable WHERE companytable.companyid = usertable.companyid AND usertable.id = receipt_table.user_id AND clientstable.clientid = receipt_table.clientid AND receipt_table.receipt_no = $P{INVOICE_NO}]]>
+	</queryString>
+	<field name="company_phone" class="java.lang.String"/>
+	<field name="company_email" class="java.lang.String"/>
+	<field name="companyname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="companypin" class="java.lang.String"/>
+	<field name="date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="user_name" class="java.lang.String"/>
+	<field name="lpo_no" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Total" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="receipt_no" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="clientname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="clientphone" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="clientemail" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total_vat" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="237" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="1" width="555" height="174" uuid="3f1a54f7-352d-4547-a466-d35a556d2473"/>
+				<imageExpression><![CDATA["ourlogo.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="9" y="186" width="258" height="15" uuid="429789c0-f98a-473d-8919-81a330973223"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{companyname}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="9" y="175" width="255" height="12" backcolor="#FF6600" uuid="8e8c8523-63f7-4e14-8f25-6aeb7282cbce"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="301" y="175" width="247" height="12" backcolor="#FF6600" uuid="b7f3548d-ce20-4f60-8257-7f86fd985a14"/>
+			</rectangle>
+			<textField>
+				<reportElement x="9" y="198" width="258" height="15" uuid="f627ddd3-6341-4253-a23f-6c114a6f2797"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Phone #: "+$F{company_phone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="9" y="209" width="258" height="15" uuid="9c22466c-1d9f-45f3-a8b3-8c915c032cf5"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Email: "+$F{company_email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="9" y="221" width="258" height="15" uuid="14c1df07-69d3-4812-b737-5155dbdccb6d"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["PIN: "+$F{companypin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="301" y="186" width="247" height="15" uuid="783846aa-6c98-49a6-83f1-84c7e7a5e5ef"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{clientname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="301" y="197" width="247" height="15" uuid="cb3db35e-1c59-428c-bdda-7539ebe170f3"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Phone #: "+$F{clientphone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="301" y="208" width="247" height="15" uuid="b5afec74-9f71-4773-8804-d3b8bd03aa18"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Email: "+$F{clientemail}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="301" y="220" width="247" height="15" uuid="1a471ac3-5f71-469c-be56-880b7f60b4c8"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["REF/LPO No "+$F{lpo_no}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="39" y="121" width="148" height="34" forecolor="#999999" uuid="9ac912a5-8edd-4692-ba2c-57626c0fc1d2"/>
+				<textElement>
+					<font size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Receipt]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="306" y="176" width="28" height="11" uuid="b5fd1cf3-0c12-485b-9c80-91a603302bd4"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="175" width="41" height="12" uuid="ce5e0f80-9e6b-41b6-ab9a-93f680627855"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FROM]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement x="9" y="8" width="342" height="15" forecolor="#FF6600" uuid="eac9bbc8-20e6-4824-b8dc-5ae73002313f"/>
+				<textElement verticalAlignment="Top">
+					<font size="10" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[We invoice you the following products/services:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="490" y="10" width="58" height="13" forecolor="#999999" uuid="f64f1051-8d2e-4ec1-b250-f7a978f3a792"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="460" y="10" width="35" height="13" forecolor="#999999" uuid="d14fd59f-b8c8-4103-82e3-376b60bed16b"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="334" y="0" width="214" height="13" uuid="8ccc738e-8da2-42bf-ba9d-a22abb38c666"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Receipt #: "+$F{receipt_no}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="51" splitType="Stretch">
+			<componentElement>
+				<reportElement key="table 1" style="table_TD" x="9" y="1" width="539" height="50" uuid="9e3834ff-67d6-4baf-a759-8008cb0084ab"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="invoiceLines" uuid="c3075ab8-9712-4be3-b9d6-071284e11ed4">
+						<datasetParameter name="invoice_no">
+							<datasetParameterExpression><![CDATA[$F{receipt_no}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="109" uuid="b5e54e7b-2375-48b0-8be4-26bc3f1d6ef6">
+						<jr:columnHeader style="table_TH" height="17" rowSpan="1">
+							<box>
+								<pen lineStyle="Dotted" lineColor="#FF6600"/>
+								<topPen lineStyle="Dotted" lineColor="#FF6600"/>
+								<leftPen lineStyle="Dotted" lineColor="#FF6600"/>
+								<bottomPen lineStyle="Dotted" lineColor="#FF6600"/>
+								<rightPen lineStyle="Dotted" lineColor="#FF6600"/>
+							</box>
+							<staticText>
+								<reportElement x="0" y="0" width="109" height="16" uuid="5f2a4a1b-34c9-4360-8d8f-0a1ef859476b"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Material Item]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_CH" height="16" rowSpan="1">
+							<box>
+								<pen lineColor="#FFFFFF"/>
+								<topPen lineColor="#FFFFFF"/>
+								<leftPen lineColor="#FFFFFF"/>
+								<bottomPen lineColor="#FFFFFF"/>
+								<rightPen lineColor="#FFFFFF"/>
+							</box>
+							<textField>
+								<reportElement x="10" y="0" width="99" height="15" uuid="d6770972-ef6d-4dee-938d-8fe815fcba2e"/>
+								<textElement verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{type}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="218" uuid="863138f2-a909-40eb-97b7-1e87005df100">
+						<jr:columnHeader style="table_TH" height="17" rowSpan="1">
+							<box>
+								<pen lineStyle="Dotted" lineColor="#FF6600"/>
+								<topPen lineStyle="Dotted" lineColor="#FF6600"/>
+								<leftPen lineStyle="Dotted" lineColor="#FF6600"/>
+								<bottomPen lineStyle="Dotted" lineColor="#FF6600"/>
+								<rightPen lineStyle="Dotted" lineColor="#FF6600"/>
+							</box>
+							<staticText>
+								<reportElement x="0" y="0" width="218" height="16" uuid="51b84c12-6c96-468e-a994-ad5b091ab905"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Description]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_CH" height="16" rowSpan="1">
+							<box>
+								<pen lineColor="#FFFFFF"/>
+								<topPen lineColor="#FFFFFF"/>
+								<leftPen lineColor="#FFFFFF"/>
+								<bottomPen lineColor="#FFFFFF"/>
+								<rightPen lineColor="#FFFFFF"/>
+							</box>
+							<textField>
+								<reportElement x="11" y="0" width="207" height="15" uuid="3a928e58-aa20-4ad1-aafc-a09cdb340a85"/>
+								<textElement verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{CONCAT(stocktable.description,'- [',salestable.imei,']')}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="30" uuid="ced73e2e-189d-4e7c-9f4b-8bf8da4e33ce">
+						<jr:columnHeader style="table_TH" height="17" rowSpan="1">
+							<box>
+								<pen lineStyle="Dotted" lineColor="#FF6600"/>
+								<topPen lineStyle="Dotted" lineColor="#FF6600"/>
+								<leftPen lineStyle="Dotted" lineColor="#FF6600"/>
+								<bottomPen lineStyle="Dotted" lineColor="#FF6600"/>
+								<rightPen lineStyle="Dotted" lineColor="#FF6600"/>
+							</box>
+							<staticText>
+								<reportElement x="0" y="0" width="30" height="16" uuid="f9d0f6b0-e1a2-44c6-9420-d73d4cb24e33"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Qty]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_CH" height="16" rowSpan="1">
+							<box>
+								<pen lineColor="#FFFFFF"/>
+								<topPen lineColor="#FFFFFF"/>
+								<leftPen lineColor="#FFFFFF"/>
+								<bottomPen lineColor="#FFFFFF"/>
+								<rightPen lineColor="#FFFFFF"/>
+							</box>
+							<textField>
+								<reportElement x="0" y="0" width="30" height="15" uuid="b3fbfc84-c1eb-4af6-a197-707a10e3da02"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{qty}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="64" uuid="933f1899-51d7-4780-b96e-b714f816ba7d">
+						<jr:columnHeader style="table_TH" height="17" rowSpan="1">
+							<box>
+								<pen lineStyle="Dotted" lineColor="#FF6600"/>
+								<topPen lineStyle="Dotted" lineColor="#FF6600"/>
+								<leftPen lineStyle="Dotted" lineColor="#FF6600"/>
+								<bottomPen lineStyle="Dotted" lineColor="#FF6600"/>
+								<rightPen lineStyle="Dotted" lineColor="#FF6600"/>
+							</box>
+							<staticText>
+								<reportElement x="0" y="0" width="63" height="16" uuid="10f9e3d8-6879-4f82-af43-571effd3d839"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Unit Price]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_CH" height="16" rowSpan="1">
+							<box>
+								<pen lineColor="#FFFFFF"/>
+								<topPen lineColor="#FFFFFF"/>
+								<leftPen lineColor="#FFFFFF"/>
+								<bottomPen lineColor="#FFFFFF"/>
+								<rightPen lineColor="#FFFFFF"/>
+							</box>
+							<textField pattern="#,##0.00;(#,##0.00)">
+								<reportElement x="0" y="0" width="58" height="15" uuid="b9b980dc-92f3-46ba-ad02-98284d1b8960"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{unitprice}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="48" uuid="d0dc43a6-cc03-4e72-a710-466b28aa40af">
+						<jr:columnHeader style="table_TH" height="17" rowSpan="1">
+							<box>
+								<pen lineStyle="Dotted" lineColor="#FF6600"/>
+								<topPen lineStyle="Dotted" lineColor="#FF6600"/>
+								<leftPen lineStyle="Dotted" lineColor="#FF6600"/>
+								<bottomPen lineStyle="Dotted" lineColor="#FF6600"/>
+								<rightPen lineStyle="Dotted" lineColor="#FF6600"/>
+							</box>
+							<staticText>
+								<reportElement x="0" y="0" width="48" height="16" uuid="91483fd4-03be-4051-9aa2-a9b43c0dfc76"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9" isBold="true"/>
+								</textElement>
+								<text><![CDATA[VAT]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_CH" height="16" rowSpan="1">
+							<box>
+								<pen lineColor="#FFFFFF"/>
+								<topPen lineColor="#FFFFFF"/>
+								<leftPen lineColor="#FFFFFF"/>
+								<bottomPen lineColor="#FFFFFF"/>
+								<rightPen lineColor="#FFFFFF"/>
+							</box>
+							<textField pattern="#,##0.00;(#,##0.00)">
+								<reportElement x="0" y="0" width="44" height="15" uuid="1ae5aa30-cbde-47c4-b97b-3fa87f72b58e"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{vat}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="69" uuid="362d1010-5794-40af-b452-4ca64df9ff97">
+						<jr:columnHeader style="table_TH" height="17" rowSpan="1">
+							<box>
+								<pen lineStyle="Dotted" lineColor="#FF6600"/>
+								<topPen lineStyle="Dotted" lineColor="#FF6600"/>
+								<leftPen lineStyle="Dotted" lineColor="#FF6600"/>
+								<bottomPen lineStyle="Dotted" lineColor="#FF6600"/>
+								<rightPen lineStyle="Dotted" lineColor="#FF6600"/>
+							</box>
+							<staticText>
+								<reportElement x="0" y="0" width="69" height="16" uuid="c2ffb29a-dfe5-4203-9abb-02111e3aa388"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="9" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Grand Total]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_CH" height="16" rowSpan="1">
+							<box>
+								<pen lineColor="#FFFFFF"/>
+								<topPen lineColor="#FFFFFF"/>
+								<leftPen lineColor="#FFFFFF"/>
+								<bottomPen lineColor="#FFFFFF"/>
+								<rightPen lineColor="#FFFFFF"/>
+							</box>
+							<textField pattern="#,##0.00;(#,##0.00)">
+								<reportElement x="0" y="0" width="63" height="15" uuid="809ca330-a105-4753-890e-ebae26538945"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="9"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{totalprice}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="20">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="20" forecolor="#999999" uuid="069fd162-e0d4-4fd6-a344-47201fe761b0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Thank you for your business!]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="96" splitType="Stretch">
+			<line>
+				<reportElement x="392" y="49" width="152" height="1" uuid="f1a9e653-c852-46d6-8854-b1f47a48763e"/>
+			</line>
+			<staticText>
+				<reportElement x="381" y="11" width="72" height="19" forecolor="#666666" uuid="ecb8a4b1-0806-4f64-a39e-d56073b1a43a"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sub Total:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="381" y="49" width="72" height="20" forecolor="#666666" uuid="418f592c-563c-45d5-a943-9b75bde583e4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL:]]></text>
+			</staticText>
+			<textField pattern="#,##0.00;(#,##0.00)">
+				<reportElement x="456" y="10" width="86" height="20" uuid="f7c40bd5-e200-408e-bd45-5ff90474a5cf"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Total} - $F{total_vat}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="392" y="73" width="152" height="1" uuid="e9de3ea9-8001-4415-84c7-4299deb47793"/>
+			</line>
+			<textField>
+				<reportElement x="381" y="74" width="163" height="20" forecolor="#999999" uuid="8459a9f7-2cb1-4ab2-b54d-aa85d86d076c"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Prepared by "+$F{user_name}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)">
+				<reportElement x="456" y="29" width="86" height="20" uuid="4bb84da9-2911-4a0b-bf99-da4c641199c0"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_vat}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)">
+				<reportElement x="456" y="49" width="86" height="20" uuid="f990360c-40bd-413c-9934-acf71f06e81b"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Total}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="381" y="29" width="72" height="20" forecolor="#666666" uuid="634dd9ff-3a8b-4672-8b94-165e592631bc"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[VAT 16%:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="392" y="68" width="152" height="1" uuid="4dc04cc6-0c01-426f-8a12-078f114b0aea"/>
+			</line>
+		</band>
+	</summary>
+</jasperReport>
