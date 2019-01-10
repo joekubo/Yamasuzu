@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 30, 2018 at 03:58 PM
+-- Generation Time: Jan 09, 2019 at 10:06 AM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -233,7 +233,174 @@ INSERT INTO `logstable` (`id`, `userid`, `name`, `date`, `time`, `operation`) VA
 (1500, '7', 'Raphael Kunga', '2018-11-30', '16:58:52', 'Successfully logged in'),
 (1501, '7', 'Raphael Kunga', '2018-11-30', '16:59:50', 'Successfully logged in'),
 (1502, '7', 'Raphael Kunga', '2018-11-30', '17:01:51', 'Successfully logged in'),
-(1503, '7', 'Raphael Kunga', '2018-11-30', '17:04:35', 'Successfully logged in');
+(1503, '7', 'Raphael Kunga', '2018-11-30', '17:04:35', 'Successfully logged in'),
+(1504, '7', 'Raphael Kunga', '2018-11-30', '22:22:38', 'Successfully logged in'),
+(1505, '7', 'Raphael Kunga', '2018-11-30', '22:23:41', 'Successfully logged in'),
+(1506, '7', 'Raphael Kunga', '2018-11-30', '22:25:20', 'Successfully logged in'),
+(1507, '7', 'Raphael Kunga', '2018-11-30', '22:28:18', 'Successfully logged in'),
+(1508, '7', 'Raphael Kunga', '2018-11-30', '22:29:34', 'Successfully logged in'),
+(1509, '7', 'Raphael Kunga', '2018-11-30', '22:33:24', 'Successfully logged in'),
+(1510, '7', 'Raphael Kunga', '2018-11-30', '22:35:06', 'Successfully logged in'),
+(1511, '7', 'Raphael Kunga', '2018-11-30', '22:38:06', 'Successfully logged in'),
+(1512, '7', 'Raphael Kunga', '2018-11-30', '22:48:08', 'Successfully logged in'),
+(1513, '7', 'Raphael Kunga', '2018-11-30', '22:50:27', 'Successfully logged in'),
+(1514, '7', 'Raphael Kunga', '2018-11-30', '22:50:36', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1515, '7', 'Raphael Kunga', '2018-11-30', '22:53:01', 'Successfully logged in'),
+(1516, '7', 'Raphael Kunga', '2018-11-30', '22:58:11', 'Successfully logged in'),
+(1517, '7', 'Raphael Kunga', '2018-11-30', '22:59:52', 'Successfully logged in'),
+(1518, '7', 'Raphael Kunga', '2018-11-30', '23:10:25', 'Successfully logged in'),
+(1519, '7', 'Raphael Kunga', '2018-11-30', '23:15:37', 'Successfully logged in'),
+(1520, '7', 'Raphael Kunga', '2018-11-30', '23:17:03', 'Successfully logged in'),
+(1521, '7', 'Raphael Kunga', '2018-11-30', '23:18:44', 'Successfully logged in'),
+(1522, '7', 'Raphael Kunga', '2018-11-30', '23:19:46', 'Successfully logged in'),
+(1523, '7', 'Raphael Kunga', '2018-11-30', '23:21:06', 'Successfully logged in'),
+(1524, '7', 'Raphael Kunga', '2018-11-30', '23:21:19', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1525, '7', 'Raphael Kunga', '2018-11-30', '23:21:23', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1526, '7', 'Raphael Kunga', '2018-11-30', '23:22:07', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1527, '7', 'Raphael Kunga', '2018-11-30', '23:22:12', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1528, '7', 'Raphael Kunga', '2018-11-30', '23:22:34', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1529, '7', 'Raphael Kunga', '2018-11-30', '23:22:44', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1530, '7', 'Raphael Kunga', '2018-11-30', '23:22:49', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1531, '7', 'Raphael Kunga', '2018-11-30', '23:23:02', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1532, '7', 'Raphael Kunga', '2018-11-30', '23:23:06', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1533, '7', 'Raphael Kunga', '2018-11-30', '23:28:19', 'Successfully logged in'),
+(1534, '7', 'Raphael Kunga', '2018-11-30', '23:34:44', 'Successfully logged in'),
+(1535, '7', 'Raphael Kunga', '2018-11-30', '23:37:10', 'Successfully logged in'),
+(1536, '7', 'Raphael Kunga', '2018-11-30', '23:41:11', 'Successfully logged in'),
+(1537, '7', 'Raphael Kunga', '2018-11-30', '23:44:45', 'Successfully logged in'),
+(1538, '7', 'Raphael Kunga', '2018-11-30', '23:50:53', 'Successfully logged in'),
+(1539, '7', 'Raphael Kunga', '2018-12-01', '00:03:03', 'Successfully logged in'),
+(1540, '7', 'Raphael Kunga', '2018-12-01', '00:06:55', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1541, '7', 'Raphael Kunga', '2018-12-01', '00:06:59', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1542, '7', 'Raphael Kunga', '2018-12-01', '00:07:55', 'Successfully logged in'),
+(1543, '7', 'Raphael Kunga', '2018-12-01', '00:16:16', 'Successfully logged in'),
+(1544, '7', 'Raphael Kunga', '2018-12-01', '00:17:05', 'Successfully logged in'),
+(1545, '7', 'Raphael Kunga', '2018-12-01', '00:19:33', 'Successfully logged in'),
+(1546, '7', 'Raphael Kunga', '2018-12-01', '00:21:41', 'Successfully logged in'),
+(1547, '7', 'Raphael Kunga', '2018-12-01', '00:23:04', 'Successfully logged in'),
+(1548, '7', 'Raphael Kunga', '2018-12-01', '00:23:31', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1549, '7', 'Raphael Kunga', '2018-12-01', '00:23:35', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1550, '7', 'Raphael Kunga', '2018-12-01', '00:23:39', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1551, '7', 'Raphael Kunga', '2018-12-01', '00:41:05', 'Successfully logged in'),
+(1552, '7', 'Raphael Kunga', '2018-12-01', '00:42:44', 'Successfully logged in'),
+(1553, '7', 'Raphael Kunga', '2018-12-01', '00:43:32', 'Successfully logged in'),
+(1554, '7', 'Raphael Kunga', '2018-12-01', '00:47:24', 'Successfully logged in'),
+(1555, '7', 'Raphael Kunga', '2018-12-01', '00:49:16', 'Successfully logged in'),
+(1556, '7', 'Raphael Kunga', '2018-12-01', '00:49:58', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1557, '7', 'Raphael Kunga', '2018-12-01', '00:50:02', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1558, '7', 'Raphael Kunga', '2018-12-01', '00:50:06', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1559, '7', 'Raphael Kunga', '2018-12-01', '00:50:10', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1560, '7', 'Raphael Kunga', '2018-12-01', '00:50:13', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1561, '7', 'Raphael Kunga', '2018-12-01', '00:52:14', 'Successfully logged in'),
+(1562, '7', 'Raphael Kunga', '2018-12-01', '00:57:28', 'Successfully logged in'),
+(1563, '7', 'Raphael Kunga', '2018-12-01', '01:03:59', 'Successfully logged in'),
+(1564, '7', 'Raphael Kunga', '2018-12-01', '01:04:22', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1565, '7', 'Raphael Kunga', '2018-12-01', '01:04:37', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1566, '7', 'Raphael Kunga', '2018-12-01', '01:05:28', 'Successfully logged in'),
+(1567, '7', 'Raphael Kunga', '2018-12-01', '01:11:51', 'Successfully logged in'),
+(1568, '7', 'Raphael Kunga', '2018-12-01', '01:38:13', 'Successfully logged in'),
+(1569, '7', 'Raphael Kunga', '2018-12-01', '05:48:48', 'Successfully logged in'),
+(1570, '7', 'Raphael Kunga', '2018-12-01', '05:55:24', 'Successfully logged in'),
+(1571, '7', 'Raphael Kunga', '2018-12-01', '05:57:16', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1572, '7', 'Raphael Kunga', '2018-12-01', '05:57:29', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1573, '7', 'Raphael Kunga', '2018-12-01', '05:57:34', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1574, '7', 'Raphael Kunga', '2018-12-01', '05:57:39', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1575, '7', 'Raphael Kunga', '2018-12-01', '05:58:37', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1576, '7', 'Raphael Kunga', '2018-12-01', '06:26:50', 'Successfully logged in'),
+(1577, '7', 'Raphael Kunga', '2018-12-01', '06:30:41', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1578, '7', 'Raphael Kunga', '2018-12-01', '06:34:27', 'Successfully logged in'),
+(1579, '7', 'Raphael Kunga', '2018-12-01', '06:35:48', 'Successfully logged in'),
+(1580, '7', 'Raphael Kunga', '2018-12-01', '07:06:53', 'Successfully logged in'),
+(1581, '7', 'Raphael Kunga', '2018-12-01', '07:11:36', 'Successfully logged in'),
+(1582, '7', 'Raphael Kunga', '2018-12-01', '07:34:39', 'Successfully logged in'),
+(1583, '7', 'Raphael Kunga', '2018-12-01', '07:44:32', 'Successfully logged in'),
+(1584, '7', 'Raphael Kunga', '2018-12-01', '07:53:36', 'Successfully logged in'),
+(1585, '7', 'Raphael Kunga', '2018-12-01', '07:56:18', 'Successfully logged in'),
+(1586, '7', 'Raphael Kunga', '2018-12-01', '08:03:29', 'Successfully logged in'),
+(1587, '7', 'Raphael Kunga', '2018-12-01', '08:05:47', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1588, '7', 'Raphael Kunga', '2018-12-01', '08:07:11', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1589, '7', 'Raphael Kunga', '2018-12-01', '08:07:55', 'Successfully logged in'),
+(1590, '7', 'Raphael Kunga', '2018-12-01', '08:13:30', 'Successfully logged in'),
+(1591, '7', 'Raphael Kunga', '2018-12-01', '08:17:23', 'Successfully logged in'),
+(1592, '7', 'Raphael Kunga', '2018-12-01', '08:20:13', 'Successfully logged in'),
+(1593, '7', 'Raphael Kunga', '2018-12-01', '08:23:33', 'Successfully logged in'),
+(1594, '7', 'Raphael Kunga', '2018-12-01', '08:28:53', 'Successfully logged in'),
+(1595, '7', 'Raphael Kunga', '2018-12-01', '08:34:25', 'Successfully logged in'),
+(1596, '7', 'Raphael Kunga', '2018-12-01', '08:41:19', 'Successfully logged in'),
+(1597, '7', 'Raphael Kunga', '2018-12-01', '08:43:31', 'Successfully logged in'),
+(1598, '7', 'Raphael Kunga', '2018-12-01', '08:46:39', 'Successfully logged in'),
+(1599, '7', 'Raphael Kunga', '2018-12-01', '08:47:11', 'Successfully logged in'),
+(1600, '7', 'Raphael Kunga', '2018-12-01', '08:49:29', 'Successfully logged in'),
+(1601, '7', 'Raphael Kunga', '2018-12-01', '08:50:33', 'Successfully logged in'),
+(1602, '7', 'Raphael Kunga', '2018-12-01', '08:52:15', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1603, '7', 'Raphael Kunga', '2018-12-01', '08:52:19', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1604, '7', 'Raphael Kunga', '2018-12-01', '08:57:51', 'Successfully logged in'),
+(1605, '7', 'Raphael Kunga', '2018-12-01', '09:08:17', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1606, '7', 'Raphael Kunga', '2018-12-01', '09:09:08', 'Successfully logged in'),
+(1607, '7', 'Raphael Kunga', '2018-12-01', '09:09:49', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1608, '7', 'Raphael Kunga', '2018-12-01', '09:10:16', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1609, '7', 'Raphael Kunga', '2018-12-01', '09:12:26', 'Successfully logged in'),
+(1610, '7', 'Raphael Kunga', '2018-12-01', '09:13:00', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1611, '7', 'Raphael Kunga', '2018-12-01', '09:14:30', 'Successfully logged in'),
+(1612, '7', 'Raphael Kunga', '2018-12-01', '09:27:40', 'Successfully logged in'),
+(1613, '7', 'Raphael Kunga', '2018-12-01', '09:28:05', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1614, '7', 'Raphael Kunga', '2018-12-01', '09:28:58', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1615, '7', 'Raphael Kunga', '2018-12-01', '09:31:17', 'Successfully logged in'),
+(1616, '7', 'Raphael Kunga', '2018-12-01', '09:32:05', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1617, '7', 'Raphael Kunga', '2018-12-01', '09:33:56', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1618, '7', 'Raphael Kunga', '2018-12-01', '09:36:15', 'Successfully logged in'),
+(1619, '7', 'Raphael Kunga', '2018-12-01', '09:37:24', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1620, '7', 'Raphael Kunga', '2018-12-01', '09:42:24', 'Successfully logged in'),
+(1621, '7', 'Raphael Kunga', '2018-12-01', '09:43:33', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1622, '7', 'Raphael Kunga', '2018-12-01', '09:49:47', 'Delete Sales details for Rcpt#/Invoice#\'null\''),
+(1623, '7', 'Raphael Kunga', '2018-12-01', '09:52:23', 'Successfully logged in'),
+(1624, '7', 'Raphael Kunga', '2018-12-01', '09:53:20', 'Delete Sales details for Rcpt#/Invoice#\'\''),
+(1625, '7', 'Raphael Kunga', '2018-12-01', '09:53:49', 'Delete Sales details for Rcpt#/Invoice#\'\''),
+(1626, '7', 'Raphael Kunga', '2018-12-01', '09:58:15', 'Successfully logged in'),
+(1627, '7', 'Raphael Kunga', '2018-12-01', '09:59:22', 'Delete Sales details for Rcpt#/Invoice#\'\''),
+(1628, '7', 'Raphael Kunga', '2018-12-01', '09:59:43', 'Delete Sales details for Rcpt#/Invoice#\'\''),
+(1629, '7', 'Raphael Kunga', '2018-12-01', '10:00:58', 'Successfully logged in'),
+(1630, '7', 'Raphael Kunga', '2018-12-01', '10:01:41', 'Delete Sales details for Rcpt#/Invoice#\'\''),
+(1631, '7', 'Raphael Kunga', '2018-12-01', '10:03:53', 'Successfully logged in'),
+(1632, '7', 'Raphael Kunga', '2018-12-01', '10:04:16', 'Delete Sales details for Rcpt#/Invoice#\'\''),
+(1633, '7', 'Raphael Kunga', '2018-12-01', '10:07:08', 'Successfully logged in'),
+(1634, '7', 'Raphael Kunga', '2018-12-01', '10:07:46', 'Delete Sales details for Rcpt#/Invoice#\'\''),
+(1635, '7', 'Raphael Kunga', '2018-12-01', '10:09:00', 'Successfully logged in'),
+(1636, '7', 'Raphael Kunga', '2018-12-01', '10:09:30', 'Delete Sales details for Rcpt#/Invoice#\'\''),
+(1637, '7', 'Raphael Kunga', '2018-12-01', '10:10:49', 'Successfully logged in'),
+(1638, '7', 'Raphael Kunga', '2018-12-01', '10:12:24', 'Delete Sales details for Rcpt#/Invoice#\'\''),
+(1639, '7', 'Raphael Kunga', '2018-12-01', '10:12:39', 'Delete Sales details for Rcpt#/Invoice#\'\''),
+(1640, '7', 'Raphael Kunga', '2018-12-01', '10:14:06', 'Delete Sales details for Rcpt#/Invoice#\'\''),
+(1641, '7', 'Raphael Kunga', '2018-12-01', '10:14:11', 'Delete Sales details for Rcpt#/Invoice#\'\''),
+(1642, '7', 'Raphael Kunga', '2018-12-01', '10:14:18', 'Delete Sales details for Rcpt#/Invoice#\'\''),
+(1643, '7', 'Raphael Kunga', '2018-12-01', '10:57:12', 'Successfully logged in'),
+(1644, '7', 'Raphael Kunga', '2018-12-01', '10:59:31', 'Successfully logged in'),
+(1645, '7', 'Raphael Kunga', '2018-12-01', '11:00:37', 'Successfully logged in'),
+(1646, '7', 'Raphael Kunga', '2018-12-01', '11:08:02', 'Successfully logged in'),
+(1647, '7', 'Raphael Kunga', '2018-12-01', '14:05:16', 'Successfully logged in'),
+(1648, '7', 'Raphael Kunga', '2018-12-01', '21:21:59', 'Successfully logged in'),
+(1649, '7', 'Raphael Kunga', '2018-12-02', '16:42:09', 'Successfully logged in'),
+(1650, '7', 'Raphael Kunga', '2018-12-02', '16:45:59', 'Successfully logged in'),
+(1651, '7', 'Raphael Kunga', '2018-12-02', '16:50:52', 'Successfully logged in'),
+(1652, '7', 'Raphael Kunga', '2018-12-02', '16:56:24', 'Successfully logged in'),
+(1653, '7', 'Raphael Kunga', '2018-12-02', '17:03:22', 'Successfully logged in'),
+(1654, '7', 'Raphael Kunga', '2018-12-02', '17:11:58', 'Successfully logged in'),
+(1655, '7', 'Raphael Kunga', '2018-12-02', '17:13:09', 'Delete Sales details for Rcpt#/Invoice#\'\''),
+(1656, '7', 'Raphael Kunga', '2018-12-02', '17:14:05', 'Delete Sales details for Rcpt#/Invoice#\'\''),
+(1657, '7', 'Raphael Kunga', '2018-12-02', '17:14:21', 'Successfully logged in'),
+(1658, '7', 'Raphael Kunga', '2018-12-02', '17:15:12', 'Delete Sales details for Rcpt#/Invoice#\'\''),
+(1659, '7', 'Raphael Kunga', '2018-12-02', '17:16:07', 'Delete Sales details for Rcpt#/Invoice#\'\''),
+(1660, '7', 'Raphael Kunga', '2018-12-02', '17:19:17', 'Successfully logged in'),
+(1661, '7', 'Raphael Kunga', '2018-12-02', '17:26:10', 'Delete Sales details for Rcpt#/Invoice#\'\''),
+(1662, '7', 'Raphael Kunga', '2018-12-04', '09:14:45', 'Successfully logged in'),
+(1663, '7', 'Raphael Kunga', '2018-12-04', '14:54:54', 'Successfully logged in'),
+(1664, '7', 'Raphael Kunga', '2018-12-04', '16:32:50', 'Successfully logged in'),
+(1665, '7', 'Raphael Kunga', '2018-12-05', '09:58:26', 'Successfully logged in'),
+(1666, '7', 'Raphael Kunga', '2018-12-18', '13:22:16', 'Successfully logged in'),
+(1667, '7', 'Raphael Kunga', '2018-12-27', '12:43:30', 'Successfully logged in'),
+(1668, '7', 'Raphael Kunga', '2018-12-27', '12:54:33', 'Successfully logged in'),
+(1669, '7', 'Raphael Kunga', '2018-12-27', '12:55:16', 'Successfully logged in'),
+(1670, '7', 'Raphael Kunga', '2018-12-31', '15:38:02', 'Successfully logged in');
 
 -- --------------------------------------------------------
 
@@ -258,7 +425,8 @@ CREATE TABLE `paymenttable` (
 --
 
 INSERT INTO `paymenttable` (`paymentid`, `details`, `supplierid`, `totalamount`, `paidamount`, `datepay`, `paymentmethod`, `transactionid`, `status`) VALUES
-(140, 'INV001', 15, 168300, 0, '2018-11-30', 'CASH', '---', 1);
+(145, 'INV001', 15, 270000, 0, '2018-12-02', 'CASH', '---', 1),
+(146, '34534', 15, 18000, 0, '2018-12-18', 'CASH', '---', 1);
 
 -- --------------------------------------------------------
 
@@ -334,10 +502,11 @@ CREATE TABLE `receipt_table` (
 --
 
 INSERT INTO `receipt_table` (`receipt_no`, `clientid`, `lpo_no`, `date`, `total`, `total_vat`, `user_id`, `s`) VALUES
-('1', 2, '-', '2018-11-30', 64960, 8960, 7, 1),
-('2', 2, '-', '2018-11-30', 32480, 4480, 7, 1),
-('3', 2, '-', '2018-11-30', 32480, 4480, 7, 1),
-('4', 1, '-', '2018-11-30', 33640, 4640, 7, 1);
+('3', 1, '-', '2018-12-02', 38280, 5280, 7, 1),
+('4', 1, '-', '2018-12-02', 29000, 4000, 7, 1),
+('5', 1, '-', '2018-12-02', 29000, 4000, 7, 1),
+('6', 2, '-', '2018-12-02', 38280, 5280, 7, 1),
+('7', 1, '-', '2018-12-27', 29000, 4000, 7, 1);
 
 -- --------------------------------------------------------
 
@@ -355,6 +524,13 @@ CREATE TABLE `removetable` (
   `status` int(11) NOT NULL,
   `userid` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `removetable`
+--
+
+INSERT INTO `removetable` (`removeid`, `productcode`, `qty`, `imei`, `reason`, `removedate`, `status`, `userid`) VALUES
+(6, 'P002', 1, '434534453453453443', 'broke', '2018-12-02', 1, 7);
 
 -- --------------------------------------------------------
 
@@ -401,11 +577,10 @@ CREATE TABLE `salestable` (
 --
 
 INSERT INTO `salestable` (`salesid`, `details`, `date`, `productcode`, `imei`, `qty`, `unitprice`, `vat`, `totalprice`, `profit`, `means_of_payment`, `transactionid`, `sold`, `status`, `userid`, `companyid`, `default_`) VALUES
-(69, 1, '2018-11-30', 'P001', '34534534543354', 1, 28000, 4480, 32480, 10000, 'CASH', '---', 'yes', 1, '7', 1, 1),
-(70, 1, '2018-11-30', 'P001', '2342342323', 1, 28000, 4480, 32480, 10000, 'CASH', '---', 'yes', 1, '7', 1, 1),
-(71, 2, '2018-11-30', 'P001', '345342334534534', 1, 28000, 4480, 32480, 10000, 'CASH', '---', 'yes', 1, '7', 1, 1),
-(72, 3, '2018-11-30', 'P001', '3453456456456', 1, 28000, 4480, 32480, 10000, 'CASH', '---', 'yes', 1, '7', 1, 1),
-(73, 4, '2018-11-30', 'P002', '4564564564564', 1, 29000, 4640, 33640, 8900, 'CASH', '---', 'yes', 1, '7', 1, 0);
+(153, 3, '2018-12-02', 'P002', '34534534534534', 1, 33000, 5280, 38280, 13000, 'CASH', '---', 'yes', 1, '7', 1, 1),
+(155, 5, '2018-12-02', 'P001', '4535345453', 1, 25000, 4000, 29000, 7000, 'CASH', '---', 'yes', 1, '7', 1, 1),
+(156, 6, '2018-12-02', 'P002', '3453445435', 1, 33000, 5280, 38280, 13000, 'CASH', '---', 'yes', 1, '7', 1, 1),
+(157, 7, '2018-12-27', 'P001', '345354344334345345', 1, 25000, 4000, 29000, 7000, 'CASH', '---', 'yes', 1, '7', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -432,15 +607,21 @@ CREATE TABLE `stockingtable` (
 --
 
 INSERT INTO `stockingtable` (`stockingId`, `invoiceno`, `productcode`, `qty`, `imei`, `unitprice`, `total`, `invoicedate`, `supplierid`, `userid`, `status`) VALUES
-(599, 'INV001', 'P001', 1, '3423423343454534', 18000, 18000, '2018-11-30', 15, 7, 1),
-(600, 'INV001', 'P001', 1, '34534534543354', 18000, 18000, '2018-11-30', 15, 7, 1),
-(601, 'INV001', 'P001', 1, '3453456456456', 18000, 18000, '2018-11-30', 15, 7, 1),
-(602, 'INV001', 'P001', 1, '3453453454567565', 18000, 18000, '2018-11-30', 15, 7, 1),
-(603, 'INV001', 'P001', 1, '345342334534534', 18000, 18000, '2018-11-30', 15, 7, 1),
-(604, 'INV001', 'P001', 1, '2342342323', 18000, 18000, '2018-11-30', 15, 7, 1),
-(605, 'INV001', 'P002', 1, '342343432423', 20100, 20100, '2018-11-30', 15, 7, 1),
-(606, 'INV001', 'P002', 1, '2423423423', 20100, 20100, '2018-11-30', 15, 7, 1),
-(607, 'INV001', 'P002', 1, '4564564564564', 20100, 20100, '2018-11-30', 15, 7, 1);
+(639, 'INV001', 'P001', 1, '345354344334345345', 18000, 18000, '2018-12-02', 15, 7, 0),
+(640, 'INV001', 'P001', 1, '4535345453', 18000, 18000, '2018-12-02', 15, 7, 0),
+(641, 'INV001', 'P001', 1, '3453454335345', 18000, 18000, '2018-12-02', 15, 7, 1),
+(642, 'INV001', 'P001', 1, '34534543345345', 18000, 18000, '2018-12-02', 15, 7, 1),
+(643, 'INV001', 'P001', 1, '345345435344334', 18000, 18000, '2018-12-02', 15, 7, 1),
+(644, 'INV001', 'P002', 1, '434534453453453443', 20000, 20000, '2018-12-02', 15, 7, 0),
+(645, 'INV001', 'P002', 1, '34534534534534', 20000, 20000, '2018-12-02', 15, 7, 0),
+(646, 'INV001', 'P002', 1, '3452342342432', 20000, 20000, '2018-12-02', 15, 7, 1),
+(647, 'INV001', 'P002', 1, '3453445435', 20000, 20000, '2018-12-02', 15, 7, 0),
+(648, 'INV001', 'P002', 1, '3453453454353', 20000, 20000, '2018-12-02', 15, 7, 1),
+(649, 'INV001', 'P003', 1, '345345453454343534', 20000, 20000, '2018-12-02', 15, 7, 1),
+(650, 'INV001', 'P003', 1, '3453454343453443', 20000, 20000, '2018-12-02', 15, 7, 1),
+(651, 'INV001', 'P003', 1, '34545464564545', 20000, 20000, '2018-12-02', 15, 7, 1),
+(652, 'INV001', 'P003', 1, '6756764563545433454', 20000, 20000, '2018-12-02', 15, 7, 1),
+(653, '34534', 'P001', 1, '4534543345534345', 18000, 18000, '2018-12-18', 15, 7, 1);
 
 -- --------------------------------------------------------
 
@@ -465,8 +646,9 @@ CREATE TABLE `stocktable` (
 --
 
 INSERT INTO `stocktable` (`productcode`, `type`, `description`, `categoryid`, `qty`, `currentunitprice`, `lowestsellingprice`, `highestsellingprice`, `status`) VALUES
-('P001', 'HP COMPAQ', 'MODEL 2000', 10, 2, 18000, 23000, 28000, 1),
-('P002', 'HP ELITE BOOK', '23534R', 10, 2, 20100, 25700, 29000, 1);
+('P001', 'HP COMPAQ', 'MODEL 2000', 10, 3, 18000, 23000, 25000, 1),
+('P002', 'HP ELITEBOOK', 'MODEL 8690P', 10, 2, 20000, 25000, 33000, 1),
+('P003', 'HP PROBOOK', 'MODEL 6560B', 10, 4, 20000, 26000, 29000, 1);
 
 -- --------------------------------------------------------
 
@@ -671,13 +853,13 @@ ALTER TABLE `invoice_info`
 -- AUTO_INCREMENT for table `logstable`
 --
 ALTER TABLE `logstable`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1504;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1671;
 
 --
 -- AUTO_INCREMENT for table `paymenttable`
 --
 ALTER TABLE `paymenttable`
-  MODIFY `paymentid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
+  MODIFY `paymentid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=147;
 
 --
 -- AUTO_INCREMENT for table `quotation_info`
@@ -689,7 +871,7 @@ ALTER TABLE `quotation_info`
 -- AUTO_INCREMENT for table `removetable`
 --
 ALTER TABLE `removetable`
-  MODIFY `removeid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `removeid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `renewtable`
@@ -701,13 +883,13 @@ ALTER TABLE `renewtable`
 -- AUTO_INCREMENT for table `salestable`
 --
 ALTER TABLE `salestable`
-  MODIFY `salesid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
+  MODIFY `salesid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=158;
 
 --
 -- AUTO_INCREMENT for table `stockingtable`
 --
 ALTER TABLE `stockingtable`
-  MODIFY `stockingId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=608;
+  MODIFY `stockingId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=654;
 
 --
 -- AUTO_INCREMENT for table `supplierstable`
